@@ -175,9 +175,9 @@ def load_models():
     baskets = preprocessor.get_basket_data()
     user_item_matrix = preprocessor.get_transaction_matrix()
     
-    # Initialize models
-    mba = MarketBasketAnalyzer(min_support=0.01, min_confidence=0.1)
-    cf = CollaborativeFilteringRecommender(n_components=10)
+    # Initialize models with optimized parameters
+    mba = MarketBasketAnalyzer(min_support=0.02, min_confidence=0.2)  # Higher thresholds for speed
+    cf = CollaborativeFilteringRecommender(n_components=5)  # Fewer components for speed
     hybrid = HybridRecommender()
     
     # Fit models
@@ -715,9 +715,22 @@ def main():
                 </div>
                 """, unsafe_allow_html=True)
             
-            # Get basket recommendations
+            # Get basket recommendations with caching
             st.subheader("🎯 Recommended Additional Items")
-            basket_recs = mba.get_basket_recommendations(selected_basket, 5)
+            
+            # Create a cache key based on the basket
+            basket_key = tuple(sorted(selected_basket))
+            
+            # Check if we have cached recommendations for this basket
+            if 'basket_recommendations' not in st.session_state:
+                st.session_state.basket_recommendations = {}
+            
+            if basket_key not in st.session_state.basket_recommendations:
+                with st.spinner("Computing recommendations..."):
+                    basket_recs = mba.get_basket_recommendations(selected_basket, 5)
+                    st.session_state.basket_recommendations[basket_key] = basket_recs
+            else:
+                basket_recs = st.session_state.basket_recommendations[basket_key]
             
             if basket_recs:
                 st.markdown("""

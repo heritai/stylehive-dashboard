@@ -63,6 +63,10 @@ class DataPreprocessor:
         # Filter out single-item baskets for better association rules
         multi_item_baskets = [basket for basket in baskets if len(basket) > 1]
         
+        # Limit to recent data for faster processing (last 6 months)
+        if len(multi_item_baskets) > 1000:
+            multi_item_baskets = multi_item_baskets[:1000]
+        
         return multi_item_baskets
     
     def get_product_statistics(self) -> pd.DataFrame:
