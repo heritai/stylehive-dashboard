@@ -1,7 +1,7 @@
 # StyleHive Fashion Recommendation Dashboard
 
 [![CI/CD Pipeline](https://github.com/heritai/stylehive-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/heritai/stylehive-dashboard/actions/workflows/ci.yml)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://stylehive-dashboard.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://stylehive.streamlit.app/)
 
 A comprehensive fashion retail analytics and recommendation platform built for **StyleHive**, a fictive online fashion retailer. This project demonstrates how data science and machine learning can be applied to boost revenue through intelligent product recommendations and business insights.
 
@@ -249,7 +249,7 @@ CMD ["streamlit", "run", "app.py"]
 
 ## 📊 Live Demo
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR_APP_NAME.streamlit.app)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://stylehive.streamlit.app)
 
 *Replace with your actual Streamlit Cloud URL after deployment*
 
