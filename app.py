@@ -158,14 +158,14 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-@st.cache_data
+@st.cache_data(ttl=3600)  # Cache for 1 hour
 def load_data():
     """Load and cache data"""
     preprocessor = DataPreprocessor()
     preprocessor.load_data()
     return preprocessor
 
-@st.cache_data
+@st.cache_data(ttl=3600)  # Cache for 1 hour
 def load_models():
     """Load and cache ML models"""
     # Create a new preprocessor instance for caching
@@ -343,15 +343,37 @@ def create_network_graph(network_data):
 def main():
     """Main dashboard application"""
     
+    # Initialize session state
+    if 'data_loaded' not in st.session_state:
+        st.session_state.data_loaded = False
+    if 'current_tab' not in st.session_state:
+        st.session_state.current_tab = 0
+    
     # Header
     st.markdown('<h1 class="main-header">👗 StyleHive Fashion Dashboard</h1>', unsafe_allow_html=True)
     st.markdown('<p class="subtitle">Fashion Recommendation & Business Insights Platform</p>', unsafe_allow_html=True)
     
-    # Load data
-    with st.spinner("Loading data and models..."):
-        preprocessor = load_data()
-        mba, cf, hybrid = load_models()
-        insights = BusinessInsights(preprocessor)
+    # Load data only once
+    if not st.session_state.data_loaded:
+        with st.spinner("Loading data and models..."):
+            preprocessor = load_data()
+            mba, cf, hybrid = load_models()
+            insights = BusinessInsights(preprocessor)
+            
+            # Store in session state
+            st.session_state.preprocessor = preprocessor
+            st.session_state.mba = mba
+            st.session_state.cf = cf
+            st.session_state.hybrid = hybrid
+            st.session_state.insights = insights
+            st.session_state.data_loaded = True
+    else:
+        # Use cached data
+        preprocessor = st.session_state.preprocessor
+        mba = st.session_state.mba
+        cf = st.session_state.cf
+        hybrid = st.session_state.hybrid
+        insights = st.session_state.insights
     
     # Create tabs for navigation
     tab1, tab2, tab3 = st.tabs(["📊 Global Insights", "🔍 Recommendation Explorer", "🛒 Basket Simulation"])
@@ -531,7 +553,8 @@ def main():
         products = sorted(preprocessor.df['Product'].unique())
         selected_product = st.selectbox(
             "Select a product to get recommendations:",
-            products
+            products,
+            key="product_selector"
         )
         
         if selected_product:
@@ -623,7 +646,8 @@ def main():
         selected_basket = st.multiselect(
             "Select products for your basket:",
             available_products,
-            default=[]
+            default=[],
+            key="basket_products"
         )
         
         if selected_basket:
