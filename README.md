@@ -1,5 +1,8 @@
 # StyleHive Fashion Recommendation Dashboard
 
+[![CI/CD Pipeline](https://github.com/heritai/stylehive-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/heritai/stylehive-dashboard/actions/workflows/ci.yml)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://stylehive-dashboard.streamlit.app/)
+
 A comprehensive fashion retail analytics and recommendation platform built for **StyleHive**, a fictive online fashion retailer. This project demonstrates how data science and machine learning can be applied to boost revenue through intelligent product recommendations and business insights.
 
 ## 🎯 Business Context
@@ -92,6 +95,21 @@ The project uses a **synthetic but realistic dataset** containing 18 months of t
 
 4. **Open your browser** and navigate to `http://localhost:8501`
 
+### Testing
+
+Run the test suite to verify everything works correctly:
+
+```bash
+python test_app.py
+```
+
+This will test:
+- ✅ All required imports
+- ✅ Data generation and preprocessing
+- ✅ ML model creation and training
+- ✅ App component functionality
+- ✅ File structure and dependencies
+
 ## 📁 Project Structure
 
 ```
@@ -161,6 +179,32 @@ This dashboard demonstrates how fashion retailers can:
 - **Simplified Models**: Real-world systems may require more sophisticated algorithms
 - **Scalability**: Production systems need additional considerations for large datasets
 - **Privacy**: Real customer data requires proper privacy and security measures
+
+## 🧪 CI/CD Pipeline
+
+This project includes automated testing and deployment:
+
+### GitHub Actions Workflow
+- **Automated Testing**: Runs on every push and pull request
+- **Data Generation Tests**: Verifies synthetic data creation
+- **Model Training Tests**: Ensures ML models work correctly
+- **App Component Tests**: Validates Streamlit app functionality
+- **Import Validation**: Checks all dependencies are available
+
+### Local Testing
+```bash
+# Run comprehensive test suite
+python test_app.py
+
+# Test specific components
+python -c "from app import load_data; print('✅ App loads successfully')"
+```
+
+### Continuous Integration Benefits
+- ✅ **Early Bug Detection**: Catch issues before deployment
+- ✅ **Automated Validation**: No manual testing required
+- ✅ Deployment Confidence**: Only tested code gets deployed
+- ✅ **Documentation**: Test results provide usage examples
 
 ## 🚀 Deployment Options
 
