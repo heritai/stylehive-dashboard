@@ -3,21 +3,21 @@
 [![CI/CD Pipeline](https://github.com/heritai/stylehive-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/heritai/stylehive-dashboard/actions/workflows/ci.yml)
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://stylehive.streamlit.app/)
 
-A comprehensive fashion retail analytics and recommendation platform for **StyleHive**, a fictional online fashion retailer. This project demonstrates how data science and machine learning can drive revenue growth through intelligent product recommendations and actionable business insights.
+A comprehensive analytics and recommendation platform designed for **StyleHive**, a fictional online fashion retailer. This project demonstrates how data science and machine learning can drive revenue growth through intelligent product recommendations and actionable business insights.
 
 ## 🎯 Business Context
 
 **Problem**: StyleHive struggles with low average order values, as customers typically purchase only 1-2 items per transaction, missing significant cross-selling opportunities.
 
-**Solution**: A dynamic recommendation dashboard suggesting complementary products, designed to increase basket size and enhance customer satisfaction. It's powered by market basket analysis and collaborative filtering.
+**Solution**: Powered by Market Basket Analysis and Collaborative Filtering, this dynamic recommendation dashboard suggests complementary products, designed to increase basket size and enhance customer satisfaction.
 
 ## ✨ Features
 
 ### 📊 Global Insights Dashboard
 -   **Key Performance Indicators (KPIs)**: Track total transactions, unique customers, average basket size, and key revenue metrics.
 -   **Top-Selling Products**: Visualize product performance with interactive bar charts.
--   **Product Co-occurrence Heatmap**: Visual representation of frequently co-purchased items.
--   **Product Affinity Network**: Dynamic network graph to explore product relationships and associations.
+-   **Product Co-occurrence Heatmap**: A visual representation of frequently co-purchased items.
+-   **Product Affinity Network**: Explore product relationships and associations through a dynamic network graph.
 
 ### 🔍 Recommendation Explorer
 -   **Product-Specific Recommendations**: Get complementary item suggestions by selecting any product.
@@ -174,7 +174,7 @@ This dashboard demonstrates how fashion retailers can:
 
 ## ⚠️ Important Notes
 
--   **Synthetic Data**: The project uses synthetically generated data for demonstration purposes only.
+-   **Synthetic Data**: This project uses synthetically generated data for demonstration purposes only.
 -   **Simplified Models**: While effective for demonstration, real-world systems typically require more sophisticated algorithms and models.
 -   **Scalability**: Production-grade systems require further considerations for scalability and performance with large datasets.
 -   **Privacy**: Handling real customer data mandates stringent privacy and security protocols.
