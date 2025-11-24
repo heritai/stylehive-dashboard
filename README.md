@@ -3,34 +3,34 @@
 [![CI/CD Pipeline](https://github.com/heritai/stylehive-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/heritai/stylehive-dashboard/actions/workflows/ci.yml)
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://stylehive.streamlit.app/)
 
-A comprehensive fashion retail analytics and recommendation platform designed for **StyleHive**, a fictional online fashion retailer. This project showcases how data science and machine learning can elevate revenue through intelligent product recommendations and actionable business insights.
+A comprehensive fashion retail analytics and recommendation platform for **StyleHive**, a fictional online fashion retailer. This project demonstrates how data science and machine learning can drive revenue growth through intelligent product recommendations and actionable business insights.
 
 ## 🎯 Business Context
 
-**Problem**: StyleHive faces challenges with low average order values due to customers typically purchasing only 1-2 items per transaction, leading to missed cross-selling opportunities.
+**Problem**: StyleHive struggles with low average order values, as customers typically purchase only 1-2 items per transaction, missing significant cross-selling opportunities.
 
-**Solution**: A dynamic recommendation dashboard that suggests complementary products, increasing basket size and enhancing customer satisfaction, powered by market basket analysis and collaborative filtering.
+**Solution**: A dynamic recommendation dashboard suggesting complementary products, designed to increase basket size and enhance customer satisfaction. It's powered by market basket analysis and collaborative filtering.
 
 ## ✨ Features
 
 ### 📊 Global Insights Dashboard
 -   **Key Performance Indicators (KPIs)**: Track total transactions, unique customers, average basket size, and key revenue metrics.
 -   **Top-Selling Products**: Visualize product performance with interactive bar charts.
--   **Product Co-occurrence Heatmap**: A visual representation of frequently co-purchased items.
--   **Product Affinity Network**: Explore product relationships and associations through a dynamic network graph.
+-   **Product Co-occurrence Heatmap**: Visual representation of frequently co-purchased items.
+-   **Product Affinity Network**: Dynamic network graph to explore product relationships and associations.
 
 ### 🔍 Recommendation Explorer
 -   **Product-Specific Recommendations**: Get complementary item suggestions by selecting any product.
 -   **Multiple Recommendation Engines**:
     -   **"People Who Bought X Also Bought Y" Insights**: Utilizes Market Basket Analysis.
     -   **Collaborative Filtering**: Suggests items based on similar customer preferences.
-    -   **Hybrid Approach**: Offers optimal recommendations by combining MBA and Collaborative Filtering.
+    -   **Hybrid Approach**: Offers optimized recommendations by combining MBA and Collaborative Filtering for superior results.
 -   **Confidence Scores**: Each recommendation includes clear confidence levels and explanations.
 
 ### 🛒 Customer Basket Simulation
 -   **Interactive Basket Builder**: Simulate customer shopping carts by selecting multiple products.
 -   **Smart Recommendations**: Receive intelligent suggestions for additional items based on the current basket.
--   **Basket Analysis**: Gain insights into the strength of product combinations within your simulated basket.
+-   **Basket Analysis**: Gain insights into the strength of product combinations within the simulated basket.
 
 ### 💡 Business Intelligence
 -   **Strategic Recommendations**: Generate data-driven insights to inform business strategy.
@@ -50,7 +50,7 @@ A comprehensive fashion retail analytics and recommendation platform designed fo
 
 ## 📊 Dataset
 
-This project utilizes a **synthetic, yet realistic dataset** comprising 18 months of transaction data for 10 distinct fashion products:
+This project leverages a **synthetic, yet realistic dataset** comprising 18 months of transaction data for 10 distinct fashion products:
 
 1.  White T-shirt
 2.  Blue Jeans
@@ -76,7 +76,7 @@ This project utilizes a **synthetic, yet realistic dataset** comprising 18 month
 
 ### Installation
 
-1.  **Clone the project**:
+1.  **Clone the repository**:
     ```bash
     git clone <repository-url>
     cd stylehive-recommender-dashboard
@@ -106,8 +106,8 @@ This will test:
 -   ✅ All required imports
 -   ✅ Data generation and preprocessing
 -   ✅ ML model creation and training
--   ✅ App component functionality
--   ✅ File structure and dependencies
+-   ✅ Streamlit app component functionality
+-   ✅ File structure and dependency validation
 
 ## 📁 Project Structure
 
@@ -138,11 +138,11 @@ stylehive-recommender-dashboard/
 ### Collaborative Filtering
 -   **Algorithm**: Singular Value Decomposition (SVD).
 -   **Purpose**: Discovers similar customers and products based on historical preferences.
--   **Output**: Product similarity scores derived from customer ratings/interactions.
+-   **Output**: Product similarity scores derived from customer interactions.
 -   **Use Case**: Enables "Customers like you also bought..." recommendations.
 
 ### Hybrid Recommendation System
--   **Approach**: Synergistically combines Market Basket Analysis and Collaborative Filtering.
+-   **Approach**: Synergistically combines Market Basket Analysis (MBA) and Collaborative Filtering (CF).
 -   **Weighting**: Utilizes configurable weights for each underlying model.
 -   **Output**: Delivers optimized recommendations by integrating multiple signals.
 
@@ -150,7 +150,7 @@ stylehive-recommender-dashboard/
 
 This dashboard demonstrates how fashion retailers can:
 
-1.  **Increase Average Order Value**: Effectively boost AOV by suggesting complementary products.
+1.  **Increase Average Order Value**: Effectively boost Average Order Value (AOV) by suggesting complementary products.
 2.  **Enhance Customer Experience**: Deliver a personalized shopping journey through tailored recommendations.
 3.  **Optimize Inventory Management**: Improve inventory planning by uncovering key product relationships.
 4.  **Inform Strategic Decisions**: Provide data-driven insights for robust business strategy development.
@@ -163,20 +163,20 @@ This dashboard demonstrates how fashion retailers can:
 3.  Regenerate the dataset.
 
 ### Fine-tune Recommendation Models
--   Modify confidence thresholds in `MarketBasketAnalyzer`.
--   Change SVD components in `CollaborativeFilteringRecommender`.
--   Adjust hybrid weights in `HybridRecommender`.
+1.  Modify confidence thresholds in `MarketBasketAnalyzer`.
+2.  Change SVD components in `CollaborativeFilteringRecommender`.
+3.  Adjust hybrid weights in `HybridRecommender`.
 
 ### Integrate New Visualizations
--   Extend the dashboard in `app.py`.
--   Add new chart types using Plotly.
--   Create custom business metrics in `insights.py`.
+1.  Extend the dashboard in `app.py`.
+2.  Add new chart types using Plotly.
+3.  Create custom business metrics in `insights.py`.
 
 ## ⚠️ Important Notes
 
--   **Synthetic Data**: The project uses synthetically generated data solely for demonstration purposes.
--   **Simplified Models**: While effective for demonstration, real-world systems may require more sophisticated algorithms and models.
--   **Scalability**: Production-grade systems require further considerations for scalability with large datasets.
+-   **Synthetic Data**: The project uses synthetically generated data for demonstration purposes only.
+-   **Simplified Models**: While effective for demonstration, real-world systems typically require more sophisticated algorithms and models.
+-   **Scalability**: Production-grade systems require further considerations for scalability and performance with large datasets.
 -   **Privacy**: Handling real customer data mandates stringent privacy and security protocols.
 
 ## 🧪 CI/CD Pipeline
@@ -184,9 +184,9 @@ This dashboard demonstrates how fashion retailers can:
 This project includes automated testing and deployment via GitHub Actions:
 
 ### GitHub Actions Workflow
--   **Automated Testing**: Executes on every push and pull request.
--   **Data Generation Tests**: Validates synthetic data creation.
--   **Model Training Tests**: Confirms correct functionality of ML models.
+-   **Automated Testing**: Executes automatically on every push and pull request.
+-   **Data Generation Tests**: Validates synthetic data generation.
+-   **Model Training Tests**: Confirms correct functionality of ML model training.
 -   **App Component Tests**: Verifies Streamlit application components.
 -   **Dependency Validation**: Ensures all required dependencies are met.
 
@@ -250,7 +250,7 @@ CMD ["streamlit", "run", "app.py"]
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://stylehive.streamlit.app)
 
-*Note: The badge above links to a live demo. Replace the URL with your actual Streamlit Cloud URL if deploying a new instance.*
+*Note: The badge above links to a live demo.*
 
 ## 🤝 Contributing
 
