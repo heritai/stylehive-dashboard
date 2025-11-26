@@ -3,11 +3,11 @@
 [![CI/CD Pipeline](https://github.com/heritai/stylehive-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/heritai/stylehive-dashboard/actions/workflows/ci.yml)
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://stylehive.streamlit.app/)
 
-A comprehensive analytics and recommendation platform designed for **StyleHive**, a fictional online fashion retailer. This project demonstrates how data science and machine learning can drive revenue growth through intelligent product recommendations and actionable business insights.
+A comprehensive analytics and recommendation platform developed for **StyleHive**, a fictional online fashion retailer. This project demonstrates how data science and machine learning can drive revenue growth through intelligent product recommendations and actionable business insights.
 
 ## 🎯 Business Context
 
-**Problem**: StyleHive struggles with low average order values, as customers typically purchase only 1-2 items per transaction, missing significant cross-selling opportunities.
+**Problem**: StyleHive faces challenges with low average order values, as customers frequently purchase only 1-2 items per transaction, leading to missed cross-selling opportunities.
 
 **Solution**: Powered by Market Basket Analysis and Collaborative Filtering, this dynamic recommendation dashboard suggests complementary products, designed to increase basket size and enhance customer satisfaction.
 
@@ -20,11 +20,11 @@ A comprehensive analytics and recommendation platform designed for **StyleHive**
 -   **Product Affinity Network**: Explore product relationships and associations through a dynamic network graph.
 
 ### 🔍 Recommendation Explorer
--   **Product-Specific Recommendations**: Get complementary item suggestions by selecting any product.
+-   **Product-Specific Recommendations**: Obtain complementary item suggestions by selecting any product.
 -   **Multiple Recommendation Engines**:
-    -   **"People Who Bought X Also Bought Y" Insights**: Utilizes Market Basket Analysis.
+    -   **"People Who Bought X Also Bought Y" Insights**: Leverages Market Basket Analysis.
     -   **Collaborative Filtering**: Suggests items based on similar customer preferences.
-    -   **Hybrid Approach**: Offers optimized recommendations by combining MBA and Collaborative Filtering for superior results.
+    -   **Hybrid Approach**: Delivers optimized recommendations by combining MBA and Collaborative Filtering for superior results.
 -   **Confidence Scores**: Each recommendation includes clear confidence levels and explanations.
 
 ### 🛒 Customer Basket Simulation
@@ -50,7 +50,7 @@ A comprehensive analytics and recommendation platform designed for **StyleHive**
 
 ## 📊 Dataset
 
-This project leverages a **synthetic, yet realistic dataset** comprising 18 months of transaction data for 10 distinct fashion products:
+This project leverages a **synthetic, yet realistic dataset**, comprising 18 months of transaction data for 10 distinct fashion products:
 
 1.  White T-shirt
 2.  Blue Jeans
@@ -78,8 +78,8 @@ This project leverages a **synthetic, yet realistic dataset** comprising 18 mont
 
 1.  **Clone the repository**:
     ```bash
-    git clone <repository-url>
-    cd stylehive-recommender-dashboard
+    git clone https://github.com/heritai/stylehive-dashboard.git
+    cd stylehive-dashboard
     ```
 
 2.  **Install dependencies**:
@@ -112,7 +112,7 @@ This will test:
 ## 📁 Project Structure
 
 ```
-stylehive-recommender-dashboard/
+stylehive-dashboard/
 ├── app.py                          # Main Streamlit application
 ├── requirements.txt                # Python dependencies
 ├── README.md                       # This file
@@ -137,7 +137,7 @@ stylehive-recommender-dashboard/
 
 ### Collaborative Filtering
 -   **Algorithm**: Singular Value Decomposition (SVD).
--   **Purpose**: Discovers similar customers and products based on historical preferences.
+-   **Purpose**: Discovers similar customers and products based on their historical preferences.
 -   **Output**: Product similarity scores derived from customer interactions.
 -   **Use Case**: Enables "Customers like you also bought..." recommendations.
 
@@ -153,7 +153,7 @@ This dashboard demonstrates how fashion retailers can:
 1.  **Increase Average Order Value**: Effectively boost Average Order Value (AOV) by suggesting complementary products.
 2.  **Enhance Customer Experience**: Deliver a personalized shopping journey through tailored recommendations.
 3.  **Optimize Inventory Management**: Improve inventory planning by uncovering key product relationships.
-4.  **Inform Strategic Decisions**: Provide data-driven insights for robust business strategy development.
+4.  **Inform Strategic Decisions**: Provide data-driven insights for robust business strategy and development.
 
 ## 🔧 Customization
 
@@ -174,7 +174,7 @@ This dashboard demonstrates how fashion retailers can:
 
 ## ⚠️ Important Notes
 
--   **Synthetic Data**: This project uses synthetically generated data for demonstration purposes only.
+-   **Synthetic Data**: This project utilizes synthetically generated data for demonstration purposes only.
 -   **Simplified Models**: While effective for demonstration, real-world systems typically require more sophisticated algorithms and models.
 -   **Scalability**: Production-grade systems require further considerations for scalability and performance with large datasets.
 -   **Privacy**: Handling real customer data mandates stringent privacy and security protocols.
@@ -203,7 +203,7 @@ python -c "from app import load_data; print('✅ App loads data successfully')"
 -   ✅ **Early Bug Detection**: Identifies issues proactively, preventing deployment of faulty code.
 -   ✅ **Automated Validation**: Streamlines development by eliminating manual testing.
 -   ✅ **Deployment Confidence**: Ensures only validated code is deployed.
--   ✅ **Practical Usage Examples**: Test results serve as practical usage examples.
+-   ✅ **Practical Usage Examples**: Test results also serve as practical usage examples.
 
 ## 🚀 Deployment Options
 
