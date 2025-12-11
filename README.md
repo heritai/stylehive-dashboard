@@ -3,37 +3,37 @@
 [![CI/CD Pipeline](https://github.com/heritai/stylehive-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/heritai/stylehive-dashboard/actions/workflows/ci.yml)
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://stylehive.streamlit.app/)
 
-A comprehensive analytics and recommendation platform developed for **StyleHive**, a fictional online fashion retailer. This project demonstrates how data science and machine learning can drive revenue growth through intelligent product recommendations and actionable business insights.
+A comprehensive analytics and recommendation platform for **StyleHive**, a fictional online fashion retailer. This project demonstrates how data science and machine learning can drive revenue growth through intelligent product recommendations and actionable business insights.
 
 ## 🎯 Business Context
 
-**Problem**: StyleHive faces challenges with low average order values, as customers frequently purchase only 1-2 items per transaction, leading to missed cross-selling opportunities.
+**Problem**: StyleHive faces challenges with low average order values, with customers often purchasing only 1-2 items per transaction, leading to missed cross-selling opportunities.
 
-**Solution**: Powered by Market Basket Analysis and Collaborative Filtering, this dynamic recommendation dashboard suggests complementary products, designed to increase basket size and enhance customer satisfaction.
+**Solution**: Powered by Market Basket Analysis and Collaborative Filtering, this dynamic recommendation dashboard suggests complementary products to increase basket size and enhance customer satisfaction.
 
 ## ✨ Features
 
 ### 📊 Global Insights Dashboard
--   **Key Performance Indicators (KPIs)**: Track total transactions, unique customers, average basket size, and key revenue metrics.
+-   Track **Key Performance Indicators (KPIs)**: total transactions, unique customers, average basket size, and key revenue metrics.
 -   **Top-Selling Products**: Visualize product performance with interactive bar charts.
--   **Product Co-occurrence Heatmap**: A visual representation of frequently co-purchased items.
--   **Product Affinity Network**: Explore product relationships and associations through a dynamic network graph.
+-   Visualize frequently co-purchased items with a **Product Co-occurrence Heatmap**.
+-   Explore product relationships and associations via a dynamic **Product Affinity Network** graph.
 
 ### 🔍 Recommendation Explorer
--   **Product-Specific Recommendations**: Obtain complementary item suggestions by selecting any product.
+-   Obtain complementary item suggestions by selecting any product.
 -   **Multiple Recommendation Engines**:
-    -   **"People Who Bought X Also Bought Y" Insights**: Leverages Market Basket Analysis.
-    -   **Collaborative Filtering**: Suggests items based on similar customer preferences.
-    -   **Hybrid Approach**: Delivers optimized recommendations by combining MBA and Collaborative Filtering for superior results.
--   **Confidence Scores**: Each recommendation includes clear confidence levels and explanations.
+    -   **"People Who Bought X Also Bought Y" Insights**: Leveraging Market Basket Analysis.
+    -   **Collaborative Filtering**: Suggesting items based on similar customer preferences.
+    -   **Hybrid Approach**: Delivering optimized recommendations by combining MBA and Collaborative Filtering for superior results.
+-   Each recommendation includes clear **Confidence Scores** and explanations.
 
 ### 🛒 Customer Basket Simulation
--   **Interactive Basket Builder**: Simulate customer shopping carts by selecting multiple products.
--   **Smart Recommendations**: Receive intelligent suggestions for additional items based on the current basket.
+-   Simulate customer shopping carts with an **Interactive Basket Builder**.
+-   Receive intelligent suggestions for additional items based on the current basket.
 -   **Basket Analysis**: Gain insights into the strength of product combinations within the simulated basket.
 
 ### 💡 Business Intelligence
--   **Strategic Recommendations**: Generate data-driven insights to inform business strategy.
+-   Generate data-driven insights for **Strategic Recommendations**.
 -   **Customer Segmentation**: Analyze customers across high, medium, and low-value segments.
 -   **Seasonal Patterns**: Uncover seasonal purchasing behaviors and trends.
 -   **Co-purchase Insights**: Identify key product combinations that drive sales.
@@ -63,7 +63,7 @@ This project leverages a **synthetic, yet realistic dataset**, comprising 18 mon
 9.  Dress Shoes
 10. Smartwatch
 
-### Key Realistic Patterns:
+### Key Patterns:
 -   **Co-purchases**: E.g., T-shirt + Jeans + Sneakers, Jacket + Sunglasses, Formal Shirt + Dress Shoes.
 -   **Cross-sell Opportunities**: E.g., Smartwatch with Sneakers, Sunglasses with Jackets.
 -   **Seasonal Trends**: Reflecting summer items in warm months and outerwear in winter.
@@ -130,14 +130,14 @@ stylehive-dashboard/
 ## 🧠 Machine Learning Models
 
 ### Market Basket Analysis
--   **Algorithm**: Apriori algorithm for frequent itemset mining.
--   **Purpose**: Identifies products frequently purchased together.
+-   **Algorithm**: Apriori for frequent itemset mining.
+-   **Purpose**: Identifies frequently co-purchased products.
 -   **Output**: Association rules, including confidence and lift metrics.
 -   **Use Case**: Powers "Customers who bought X also bought Y" recommendations.
 
 ### Collaborative Filtering
 -   **Algorithm**: Singular Value Decomposition (SVD).
--   **Purpose**: Discovers similar customers and products based on their historical preferences.
+-   **Purpose**: Discovers similar customers and products based on historical preferences.
 -   **Output**: Product similarity scores derived from customer interactions.
 -   **Use Case**: Enables "Customers like you also bought..." recommendations.
 
@@ -148,9 +148,9 @@ stylehive-dashboard/
 
 ## 📈 Business Impact
 
-This dashboard demonstrates how fashion retailers can:
+This dashboard empowers fashion retailers to:
 
-1.  **Increase Average Order Value**: Effectively boost Average Order Value (AOV) by suggesting complementary products.
+1.  **Increase Average Order Value (AOV)**: Effectively boost AOV by suggesting complementary products.
 2.  **Enhance Customer Experience**: Deliver a personalized shopping journey through tailored recommendations.
 3.  **Optimize Inventory Management**: Improve inventory planning by uncovering key product relationships.
 4.  **Inform Strategic Decisions**: Provide data-driven insights for robust business strategy and development.
@@ -181,7 +181,7 @@ This dashboard demonstrates how fashion retailers can:
 
 ## 🧪 CI/CD Pipeline
 
-This project includes automated testing and deployment via GitHub Actions:
+This project includes an automated CI/CD pipeline via GitHub Actions:
 
 ### GitHub Actions Workflow
 -   **Automated Testing**: Executes automatically on every push and pull request.
@@ -200,10 +200,10 @@ python -c "from app import load_data; print('✅ App loads data successfully')"
 ```
 
 ### Continuous Integration Benefits
--   ✅ **Early Bug Detection**: Identifies issues proactively, preventing deployment of faulty code.
--   ✅ **Automated Validation**: Streamlines development by eliminating manual testing.
--   ✅ **Deployment Confidence**: Ensures only validated code is deployed.
--   ✅ **Practical Usage Examples**: Test results also serve as practical usage examples.
+-   **Early Bug Detection**: Identifies issues proactively, preventing deployment of faulty code.
+-   **Automated Validation**: Streamlines development by eliminating manual testing.
+-   **Deployment Confidence**: Ensures only validated code is deployed.
+-   **Practical Usage Examples**: Test results also serve as practical usage examples.
 
 ## 🚀 Deployment Options
 
